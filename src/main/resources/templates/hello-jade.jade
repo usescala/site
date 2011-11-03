@@ -1,9 +1,11 @@
 !!! 5
 - import org.scala_tools.time.Imports._
-
 - import unfiltered.scalate._
 
 html(lang="en")
+  head
+    link{"rel" => "stylesheet", "media" => "screen", "href" => "/web/css/main.css"}
   body
+    img{"style" => 'float: left', "src" => '/web/image/logo.png', "width" => '62', "height" => '62'}
     h1 Hello Jade
     p= {new java.util.Date()}

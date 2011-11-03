@@ -1,0 +1,129 @@
+html, body {
+	background: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(/public/images/bg1.jpg);
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+}
+td, th {
+	font-family: sans-serif;
+}
+
+#wrapper {
+	margin: 5px auto;
+	width: 950px;
+	-webkit-box-shadow: 3px 3px 4px #ccc;
+	-moz-box-shadow: 3px 3px 4px #ccc;
+	box-shadow: 3px 3px 4px #ccc;
+	background: white;
+	border: 1px solid #ddd;
+}
+
+#top {
+	background: white;
+	padding: 10px 20px;
+	border-top: 4px solid #fa880c;
+	overflow: hidden;
+}
+#top h1 {
+	margin: 0;
+	color: #631;
+	text-shadow: 1px 1px 1px #ffe;
+	font-family: "Architects Daughter", sans-serif;
+	font-size: 35px;
+	line-height: 40px;
+}
+#top h1 span {
+	font-size: 14px;
+}
+#top .tag {
+	color: #db670b;
+	text-shadow: 0px 1px 0px #ed8;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#main-menu {
+	overflow: hidden;
+	list-style-type: none;
+	background: #db670b;
+	border-bottom: 4px solid #fa880c;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+#main-menu li {
+	float: left;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fb991d), to(#db670b));
+	background: -moz-linear-gradient(top, #fb991d, #db670b);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb991d', endColorstr='#db670b');
+	text-shadow: 0 -1px 0 #a91;
+}
+#main-menu li.selected, #main-menu li:hover {
+	background: -webkit-gradient(linear, left top, left bottom, from(#fca92d), to(#fa880c));
+	background: -moz-linear-gradient(top, #fca92d, #fa880c);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fca92d', endColorstr='#fa880c');
+}
+#main-menu li a {
+	color: #f5f5f5;
+	text-decoration: none;
+	display: block;
+	min-width: 90px;
+	padding: 4px 15px 2px 15px;
+}
+#main-menu li.selected a {
+	color: white;
+}
+#main-menu li a:hover {
+	color: white;
+}
+#main-menu li a:visited {
+	color: white;
+}
+
+#main {
+}
+#content {
+	padding: 10px 30px 30px 30px;
+	overflow: hidden;
+}
+#content h2 {
+	color: #db670b;
+}
+#content h3 {
+	color: #631;
+}
+#content h3 div.news-date {
+	color: #666;
+	font-size: 12px;
+}
+#bottom {
+	background: #eee;
+	color: #aaa;
+	padding: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+#bottom a, #bottom a:visited {
+	color: #9ae;
+}
+
+.rightblock {
+	width: 250px;
+	margin: 10px;
+	background: #fd7;
+	padding: 10px;
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.rightblock h3 {
+	margin-top: 0;
+	color: #631;
+}
+

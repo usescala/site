@@ -1,5 +1,8 @@
 package usescala.site
 
+import org.fusesource.scalate.servlet.ServletTemplateEngine
+import org.fusesource.scalate.layout.DefaultLayoutStrategy
+
 class Service extends unfiltered.filter.Plan {
 	import unfiltered.request._
 	import unfiltered.response._
@@ -17,6 +20,13 @@ class Service extends unfiltered.filter.Plan {
 }
 
 object Server extends App {
+
+  val engine = new ServletTemplateEngine()
+  engine.layoutStrategy = new DefaultLayoutStrategy(engine,"templates/default.jade")
+
 	val port = util.Properties.envOrElse("PORT", "8080").toInt
-  unfiltered.jetty.Http(port).filter(new Service).run
+  unfiltered.jetty.Http(port)
+   .context("/web") { _.resources(new java.net.URL(getClass().getResource("/web/css"), ".")) }
+   .context("/web") { _.resources(new java.net.URL(getClass().getResource("/web/image"), ".")) }
+   .filter(new Service).run
 }
