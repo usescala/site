@@ -1,7 +1,28 @@
--@ val body: String
--@ val title: String = "aoeu"
-html
-  head
-    title = title
-  body
-    !~~ body
+!!! 5
+- import org.scala_tools.time.Imports._
+- import unfiltered.scalate._
+
+html(lang="en")
+	head
+		link(rel="stylesheet" media="screen" href="/web/css/main.css")
+		link(rel="shortcut icon" type="image/png" href="/web/image/favicon.png")
+		link(href='http://fonts.googleapis.com/css?family=Architects+Daughter&v1' rel='stylesheet' type='text/css')
+		script(src="/web/script/jquery-1.5.2.min.js" type="text/javascript")
+
+	body
+		div(id='wrapper')
+			div(id='top')
+				img(style='float: left' src='/web/image/logo.png' width='62' height='62')
+				h1 USE Scala
+				div(class='tag') Home of the Utah Scala Enthusiasts
+			ul(id="main-menu")
+				li(class="selected")
+					a(href="/") Home
+				li
+					a(href="meetings") Meetings
+				li
+					a(href="sponsors") Sponsors
+				li
+					a(href="about") About Us
+			div(id='main')
+				div(id='content')

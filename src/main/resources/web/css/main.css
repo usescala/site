@@ -3,7 +3,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background: url(/public/images/bg1.jpg);
+	background: url(/web/image/bg1.jpg);
 	font-size: 14px;
 	line-height: 20px;
 	color: #333;
