@@ -1,3 +1,5 @@
+<% render("default.jade") %>
+
 <h1>Hello SSP</h1>
 <p>${new java.util.Date()}</p>
 

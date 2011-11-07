@@ -1,0 +1,84 @@
+<% layout("default.jade") {%>
+        <table width='100%' cellspacing='0' cellpadding='0'>
+            <tr valign='top'>
+                <td>
+                    <h2>Welcome!</h2>
+
+                    <p>
+                        Thanks for stopping by the official Utah Scala Enthusiasts home page. The Use.Scala group is
+                        dedicated
+                        to providing a strong and vibrant community for software developers interested in the Scala
+                        language and
+                        ecosystem. Everyone is invited to participate.
+                        If you're interested in becoming part of the Use.Scala group, please take a moment to follow our
+                        <a href='http://twitter.com/#!/usescala'>twitter account</a> and/or subscribe to our
+                        <a href='http://groups.google.com/group/usescala'>Google Group</a>.
+                    </p>
+
+                    <h2>News</h2>
+
+                </td>
+                <td width='30'></td>
+                <td>
+                    <!--@rightblock("Meetings") {-->
+                    <div class="rightblock">
+                        <div style='margin-bottom: 15px'>
+                            <div style='font-weight: bold'>Meeting Days and Time:</div>
+                            <div>First Thursday of the month at 5:30pm.</div>
+                        </div>
+
+                        <div>
+                            <div style='font-weight: bold'>Meeting Location:</div>
+                            <div>
+                                <address>
+                                    <a href='http://www.sendoutcards.com'>SendOutCards</a><br/>
+                                    1825 West Research Way<br/>
+                                    Salt Lake City, UT 84119
+                                </address>
+                                [<a href='http://goo.gl/maps/E7li' target='_BLANK'>Map</a>]
+                            </div>
+                            <!--<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=sendoutcards&amp;aq=&amp;sll=40.700032,-111.878672&amp;sspn=0.029152,0.062656&amp;ie=UTF8&amp;st=109146043351405611748&amp;rq=1&amp;ev=zi&amp;split=1&amp;radius=1.97&amp;hq=sendoutcards&amp;hnear=&amp;ll=40.699823,-111.880928&amp;spn=0.029149,0.062656&amp;z=14&amp;iwloc=A&amp;cid=11339967899135037015&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;q=sendoutcards&amp;aq=&amp;sll=40.700032,-111.878672&amp;sspn=0.029152,0.062656&amp;ie=UTF8&amp;st=109146043351405611748&amp;rq=1&amp;ev=zi&amp;split=1&amp;radius=1.97&amp;hq=sendoutcards&amp;hnear=&amp;ll=40.699823,-111.880928&amp;spn=0.029149,0.062656&amp;z=14&amp;iwloc=A&amp;cid=11339967899135037015" style="color:#0000FF;text-align:left">View Larger Map</a></small>-->
+                        </div>
+                    </div>
+                    <!--}-->
+
+                    <div style='padding: 10px'>
+                        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+                        <script>
+                            new TWTR.Widget({
+                                version: 2,
+                                type: 'profile',
+                                rpp: 4,
+                                interval: 6000,
+                                width: 270,
+                                height: 300,
+                                theme: {
+                                    shell: {
+                                        background: '#ffbe3d',
+                                        color: '#555555'
+                                    },
+                                    tweets: {
+                                        background: '#ffffff',
+                                        color: '#543d02',
+                                        links: '#2131e0'
+                                    }
+                                },
+                                features: {
+                                    scrollbar: false,
+                                    loop: false,
+                                    live: false,
+                                    hashtags: true,
+                                    timestamp: true,
+                                    avatars: false,
+                                    behavior: 'all'
+                                }
+                            }).render().setUser('USEScala').start();
+                        </script>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<%}%>

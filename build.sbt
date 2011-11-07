@@ -18,6 +18,7 @@ organization := "usescala"
 seq(assemblySettings: _*)
 
 libraryDependencies ++= Seq(
+	 "org.fusesource.scalamd" % "scalamd" % "1.5",
    "net.databinder" %% "unfiltered-filter" % "0.5.0",
    "net.databinder" %% "unfiltered-jetty" % "0.5.0",
    "net.databinder" %% "unfiltered-scalatest" % "0.5.0" % "test",

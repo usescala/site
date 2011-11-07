@@ -1,6 +1,7 @@
 !!! 5
 - import org.scala_tools.time.Imports._
 - import unfiltered.scalate._
+-@ var body:String = "body"
 
 html(lang="en")
 	head
@@ -26,3 +27,9 @@ html(lang="en")
 					a(href="about") About Us
 			div(id='main')
 				div(id='content')
+					!= {body}
+		div(id='bottom')
+			a(href="http://www.scala-lang.org") Scala
+			a(href="http://unfiltered.databinder.net/Unfiltered.html") Unfiltered Web Library
+			a(href=".") Maintaind by UseScala Memebers
+			a(href=".") Original Design by Alvaro Carrasco
