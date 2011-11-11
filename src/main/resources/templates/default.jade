@@ -2,6 +2,13 @@
 - import org.scala_tools.time.Imports._
 - import unfiltered.scalate._
 -@ var body:String = "body"
+-@ var page:String
+-
+	val items:List[(String,String)] = List(
+		("home","Home"),
+		("meetings", "Meetings"),
+		("sponsors",  "Sponsors"),
+		("about", "About Us"))
 
 html(lang="en")
 	head
@@ -17,19 +24,13 @@ html(lang="en")
 				h1 USE Scala
 				div(class='tag') Home of the Utah Scala Enthusiasts
 			ul(id="main-menu")
-				li(class="selected")
-					a(href="/") Home
-				li
-					a(href="meetings") Meetings
-				li
-					a(href="sponsors") Sponsors
-				li
-					a(href="about") About Us
+				- for(item <- items)
+					li(class='#{if(item._1 == page) "selected" else null}')
+						a(href='#{item._1}')= item._2
 			div(id='main')
 				div(id='content')
 					!= {body}
 		div(id='bottom')
 			a(href="http://www.scala-lang.org") Scala
 			a(href="http://unfiltered.databinder.net/Unfiltered.html") Unfiltered Web Library
-			a(href=".") Maintaind by UseScala Memebers
-			a(href=".") Original Design by Alvaro Carrasco
+			a(href=".") &copy; 2011 Alvaro Carrasco

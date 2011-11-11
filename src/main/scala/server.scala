@@ -13,23 +13,23 @@ class Service extends unfiltered.filter.Plan {
 	import dispatch.url
 	
 	def intent = {
-		case Path(Seg("alive" :: Nil)) => ResponseString("alive")
-	  case Path(Seg("hello-xml" :: Nil)) => ResponseString("""<!DOCTYPE html>"""+ HelloXml().content.toString)
-	  case req @ Path(Seg("hello-jade" :: Nil)) => Scalate(req, "hello-jade.jade")
-    case req @ Path(Seg("hello-jade-layout" :: Nil)) => Scalate(req, "hello-jade-layout.jade", ("layout","default.jade"))
-	  case req @ Path(Seg("hello-ssp" :: Nil)) => Scalate(req, "hello-ssp.ssp")
-    case req @ Path(Seg("default" :: Nil)) => Scalate(req, "default.jade")
-    case req @ Path(Seg("sponsors" :: Nil)) => Scalate(req, "sponsors.jade")
-    case req @ Path(Seg("meetings" :: Nil)) => Scalate(req, "meetings.jade")
-    case req @ Path(Seg("hello-mustache" :: Nil)) => Scalate(req, "hello-mustache.mustache",("name","Mustache"))
-    case req @ Path(Seg("hello-jade-markdown" :: Nil)) => Scalate(req, "hello-jade-markdown.jade")
+      case req @ Path(Seg(page :: Nil)) =>  page match {
+        case "sponsors" => Scalate(req, "sponsors.jade",("page",page))
+        case "meetings" => Scalate(req, "meetings.jade",("page",page))
+        case "about" => Scalate(req, "about.jade",("page",page))
+        case "alive" => ResponseString("alive")
 
-    case req @ Path(Seg(Nil)) => Scalate(req, "home.ssp")
-    /*case req @ Path(Seg("about" :: Nil)) => Scalate(req, "about.jade")
+        //explore pages
+        case "hello-xml" => ResponseString("""<!DOCTYPE html>"""+ HelloXml().content.toString)
+        case "hello-jade" => Scalate(req, "explore/hello-jade.jade")
+        case "hello-jade-layout" => Scalate(req, "explore/hello-jade-layout.jade", ("layout","default.jade"))
+        case "hello-ssp" => Scalate(req, "explore/hello-ssp.ssp")
+        case "hello-mustache" => Scalate(req, "explore/hello-mustache.mustache",("name","Mustache"))
+        case "hello-jade-markdown"  => Scalate(req, "explore/hello-jade-markdown.jade")
 
-    case req @ Path(Seg("meeting" :: Nil)) => Scalate(req, "meeting.jade")
-    */
-	 	case _ => ResponseString("Resource not found")		
+        case _ => Scalate(req, "home.ssp",("page",page))
+      }
+	 	case _ => Redirect("home")
 	}
 }
 

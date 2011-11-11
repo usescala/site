@@ -29,10 +29,4 @@ libraryDependencies ++= Seq(
    "org.slf4j" % "slf4j-jdk14" % "1.6.1",
    "org.scalatest" % "scalatest_2.9.1" % "1.6.1",
    "org.scala-tools.time" %% "time" % "0.5"
-) ++ Seq( // local testing
-  "javax.servlet" % "servlet-api" % "2.5" % "provided"
-)
-
-resolvers ++= Seq(
- "jboss" at  "https://repository.jboss.org/nexus/content/groups/public/"
 )

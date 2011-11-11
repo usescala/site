@@ -1,9 +1,21 @@
 = layout("default.jade")
 	h2 Sponsors
+	style
+		:plain
+			.sponsors {
+				overflow: hidden;
+			}
+			.sponsor {
+				float: left;
+				padding: 10px 30px;
+			}
 	div.sponsors
 		div.sponsor
 			a(href='https://www.sendoutcards.com/' target='_blank')
-			img(src='/public/images/sendoutcards.png')
+			img(src='/web/image/sendoutcards.png')
 		div.sponsor
 			a(href='https://www.gravitydev.com/' target='_blank')
-				img(src='/public/images/gravity.png')
+				img(src='/web/image/gravity.png')
+		div.sponsor
+			a(href='http://www.teksystems.com/' target='_blank')
+				img(src='/web/image/teksystems.gif')
