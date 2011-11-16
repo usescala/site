@@ -14,6 +14,7 @@ class Service extends unfiltered.filter.Plan {
 	
 	def intent = {
       case req @ Path(Seg(page :: Nil)) =>  page match {
+				case "home" => Scalate(req, "home.ssp",("page",page))
         case "sponsors" => Scalate(req, "sponsors.jade",("page",page))
         case "meetings" => Scalate(req, "meetings.jade",("page",page))
         case "about" => Scalate(req, "about.jade",("page",page))
@@ -26,10 +27,8 @@ class Service extends unfiltered.filter.Plan {
         case "hello-ssp" => Scalate(req, "explore/hello-ssp.ssp")
         case "hello-mustache" => Scalate(req, "explore/hello-mustache.mustache",("name","Mustache"))
         case "hello-jade-markdown"  => Scalate(req, "explore/hello-jade-markdown.jade")
-
-        case _ => Scalate(req, "home.ssp",("page",page))
       }
-	 	case _ => Redirect("home")
+	 	case _ => Redirect("/home")
 	}
 }
 

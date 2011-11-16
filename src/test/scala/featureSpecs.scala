@@ -31,21 +31,21 @@ class FeaturesSpecTest extends FeatureSpec with Served with GivenWhenThen with B
       })
     }
 
-    scenario("/hello-xml") {
+    scenario("hello-xml") {
       println("host: " + host)
       h(host / "hello-xml" >- { str =>
         assert(str.contains("XML"),"does not contain('XML')")
       })
     }
 
-    scenario("/hello-ssp") {
+    scenario("hello-ssp") {
       println("host: " + host)
       h(host / "hello-ssp" >- { str =>
         assert(str.contains("SSP"),"does not contain('SSP')")
       })
     }
 
-    scenario("/hello-jade") {
+    scenario("explore/hello-jade") {
       println("host: " + host)
       h(host / "hello-jade" >- { str =>
         assert(str.contains("Jade"),"does not contain('Jade')")
