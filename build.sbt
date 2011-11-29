@@ -19,11 +19,11 @@ seq(assemblySettings: _*)
 
 libraryDependencies ++= Seq(
 	 "org.fusesource.scalamd" % "scalamd" % "1.5",
-   "net.databinder" %% "unfiltered-filter" % "0.5.0",
-   "net.databinder" %% "unfiltered-jetty" % "0.5.0",
-   "net.databinder" %% "unfiltered-scalatest" % "0.5.0" % "test",
+   "net.databinder" %% "unfiltered-filter" % "0.5.1",
+   "net.databinder" %% "unfiltered-jetty" % "0.5.1",
+   "net.databinder" %% "unfiltered-scalatest" % "0.5.1" % "test",
    "net.databinder" %% "dispatch-http" % "0.8.5",
-   "net.databinder" %% "unfiltered-scalate" % "0.5.0",
+   "net.databinder" %% "unfiltered-scalate" % "0.5.1",
    "org.fusesource.scalate" % "scalate-core" % "1.5.2",
    "ch.qos.logback" % "logback-classic" % "0.9.26",
    "org.slf4j" % "slf4j-jdk14" % "1.6.1",
